@@ -1,0 +1,11 @@
+method,assumption,setting,gamma,val,test,vs_mean,edges,comps,K80,fit_s
+A1 geo kNN (unweighted),proximity implies coupling; unweighted,k=4,10.0,2.3958,2.5052,-12.0%,208,1,61,0.0
+A2 geo Gaussian (dense),coupling decays with distance,sigma=0.25xmed,3.0,2.3768,2.4973,-12.2%,1936,1,63,0.0
+A3 geo Gaussian + kNN,"as A2, truncated to k nearest","sigma=0.5x, k=6",3.0,2.3727,2.4753,-13.0%,301,1,62,0.0
+B1 similarity Gaussian,similar histories imply an edge,sigma^2=0.25xmed,0.1,1.6669,1.7057,-40.1%,3570,1,21,0.0
+B2 correlation$^+$,positive co-variation implies an edge,(no parameter),0.1,1.8389,1.8671,-34.4%,1734,1,25,0.0
+C Kalofolias,signals are smooth on the graph,"a=2.0, b=0.1",0.1,1.2673,1.2901,-54.7%,445,1,11,0.07
+D GL-SigRep,observations are noisy; latent field is smooth,beta=1.0,0.1,1.4296,1.4627,-48.6%,211,18,15,0.78
+E IGL-3SR,shared sparse spectral support + smoothness,beta=100.0,0.1,2.3935,2.4904,-12.5%,3529,1,9,10.07
+F FGL-3SR,"as IGL, with a relaxed basis update",beta=60.0,0.1,2.3761,2.4761,-13.0%,3527,1,7,20.03
+G ESA-GL,shared sparse support; topology fits it afterwards,K=5,0.1,1.3816,1.4045,-50.6%,1838,1,14,19.5
